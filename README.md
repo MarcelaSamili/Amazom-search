@@ -26,13 +26,13 @@ Backend:
  - JSDOM
 
 ## Como Usar
-1 - Clone o repositório: git clone https://github.com/seu-usuario/amazon-search.git abra usando visual studio code.
-2 - crie o arquivo ".env.development.local" e adicone(PORT=5000 - SERVER_URL=http://localhost:5000  - NODE_ENV=development)
-3 - npm install
-4 - npm start (se tudo der certo aparecerá no terminal a porta que esta rodando a api, ex: https://localhost:5000)
-5 - caso não abra tente, (node app.js) no seu terminal
-6 - Abra o arquivo index.html no navegador (# utilize o Live Server).
-7 - Digite uma palavra-chave (ex: "mouse") e clique em Buscar para obter os resultados da Amazon.
+ - Clone o repositório: git clone https://github.com/seu-usuario/amazon-search.git abra usando visual studio code.
+ - crie o arquivo ".env.development.local" e adicone(PORT=5000 - SERVER_URL=http://localhost:5000  - NODE_ENV=development)
+ - npm install
+ - npm start (se tudo der certo aparecerá no terminal a porta que esta rodando a api, ex: https://localhost:5000)
+ - caso não abra tente, (node app.js) no seu terminal
+ - Abra o arquivo index.html no navegador (# utilize o Live Server).
+ - Digite uma palavra-chave (ex: "mouse") e clique em Buscar para obter os resultados da Amazon.
 
 obs: me avise se não conseguir, ficarei feliz em ajudar.
 
