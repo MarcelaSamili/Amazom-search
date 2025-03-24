@@ -14,9 +14,9 @@ scrapeRouter.get('/', async (req, res) => {
   }
 
   try {
-    // Espera 3 segundos antes de continuar para evitar bloqueios
+    //Para evitar bloqueios da amazom a cada requisição
     await new Promise(resolve => setTimeout(resolve, 3000));
-    // URL da Amazon (substitua pelo domínio correto da Amazon do seu país)
+
     const amazonUrl = `https://www.amazon.com.br/s?k=${encodeURIComponent(
       keyword
     )}`;
