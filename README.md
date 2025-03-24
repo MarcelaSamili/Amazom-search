@@ -52,9 +52,11 @@ obs: me avise se não conseguir, ficarei feliz em ajudar.
  - O frontend recebe os dados e exibe os produtos em uma interface amigável, mostrando imagem, título, avaliações e reviews.
 
 ## Endpoints da API
-- GET /api/scrape
+
+GET /api/scrape
  - Parâmetros: keyword (palavra-chave para busca de produtos na Amazon)
-Resposta:
+
+#Resposta:
  - 200 OK: Retorna um objeto JSON com uma lista de produtos.
  - 404 Not Found: Se nenhum produto for encontrado.
  - 500 Internal Server Error: Se ocorrer algum erro ao realizar o scraping.
@@ -63,9 +65,9 @@ Resposta:
 Requisição: GET http://localhost:5000/api/scrape?keyword=mouse
 
 # Possíveis Erros
-500 - Erro no Servidor: Pode ocorrer se houver um erro durante o scraping na Amazon.
-400 - Parâmetro inválido: Caso não seja fornecida uma palavra-chave ou se o formato for incorreto.
-403 - Bloqueio de IP: Caso a Amazon bloqueie o scraping devido a múltiplas requisições em curto período.
+ - 500 - Erro no Servidor: Pode ocorrer se houver um erro durante o scraping na Amazon.
+ - 400 - Parâmetro inválido: Caso não seja fornecida uma palavra-chave ou se o formato for incorreto.
+ - 403 - Bloqueio de IP: Caso a Amazon bloqueie o scraping devido a múltiplas requisições em curto período.
 
 # Melhorias Futuras
  - Implementar mais opções de filtros de busca (ex: preço, marca, etc.).
