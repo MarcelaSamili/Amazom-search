@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon Search</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="title">
+      <h1>AMAZOM SEARCH</h1>
+      <h2>Busque seus produtos Amazom</h2>
+    </div>
+
+    <div class="search">
+      <input type="text" id="inputSearch" placeholder="Busque seu produto..." />
+      <button onclick="searchProducts()">Buscar</button>
+    </div>
+
+    <section class="cards">
+      <div id="results"></div>
+    </section>
+
+    <script>
+      async function searchProducts() {
+        const keyword = document.getElementById('inputSearch').value;
+
+        console.log('Buscando por:', keyword);
+
+        if (!keyword) {
+          alert('Um item de busca é necessário.');
+          return;
+        }
+
+        document.getElementById('results').innerHTML = '<p>Buscando...</p>';
+
+        try {
+          const response = await fetch(
+            `http://localhost:5000/api/scrape?keyword=${encodeURIComponent(
+              keyword
+            )}`
+          );
+          const data = await response.json();
+
+          console.log('Dados recebidos:', data);
+
+          if (!data.products || data.products.length === 0) {
+            document.getElementById(
+              'results'
+            ).innerHTML = `<p>Nenhum produto chamado ${keyword} encontado.</p>`;
+            return;
+          }
+
+          const html = data.products
+            .map(
+              product => `
+      <div class="product">
+        <h3>${product.title}</h3>
+        <p><strong>Avaliação:</strong> ${product.rating} ⭐</p>
+        <p><strong>Reviews:</strong> ${product.reviews}</p>
+        <img src="${product.image}" alt="Imagem do Produto" class="imgs">
+      </div>
+  `
+            )
+            .join('');
+
+          document.getElementById('results').innerHTML = html;
+        } catch {
+          document.getElementById('results').innerHTML =
+            '<p>Erro ao buscar produtos.</p>';
+          console.log('Erro:', error);
+        }
+      }
+    </script>
+  </body>
+</html>
