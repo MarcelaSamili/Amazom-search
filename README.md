@@ -37,11 +37,15 @@ Backend:
 obs: me avise se não conseguir, ficarei feliz em ajudar.
 
 ## Como Funciona
- Frontend:
+
+#Frontend:
  - O usuário insere uma palavra-chave no campo de busca e clica em Buscar.
  - A função faz uma requisição HTTP para o servidor backend.
- Backend:
- - O backend, executado com Node.js e Express, usa a biblioteca Axios para fazer uma requisição à Amazon e obter o HTML da página de pesquisa de produtos.
+
+#Backend:
+ - O backend, executado com Node.js e Express, usa a biblioteca Axios para fazer uma requisição à Amazon e obter o HTML da página de
+
+#pesquisa de produtos.
  - A biblioteca JSDOM é utilizada para manipular o HTML e extrair informações dos produtos, como título, imagem, avaliações e reviews.
  - Os dados extraídos são enviados de volta ao frontend em formato JSON.
  Exibição:
