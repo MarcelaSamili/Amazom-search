@@ -25,7 +25,7 @@ Backend:
  - Axios
  - JSDOM
 
-## Como Usar
+# Como Usar
  - Clone o repositório: git clone https://github.com/seu-usuario/amazon-search.git abra usando visual studio code.
  - crie o arquivo ".env.development.local" e adicone(PORT=5000 - SERVER_URL=http://localhost:5000  - NODE_ENV=development)
  - npm install
@@ -37,14 +37,14 @@ Backend:
 obs: me avise se não conseguir, ficarei feliz em ajudar.
 
 ## Como Funciona
-# Frontend:
+ Frontend:
  - O usuário insere uma palavra-chave no campo de busca e clica em Buscar.
  - A função faz uma requisição HTTP para o servidor backend.
-# Backend:
+ Backend:
  - O backend, executado com Node.js e Express, usa a biblioteca Axios para fazer uma requisição à Amazon e obter o HTML da página de pesquisa de produtos.
  - A biblioteca JSDOM é utilizada para manipular o HTML e extrair informações dos produtos, como título, imagem, avaliações e reviews.
  - Os dados extraídos são enviados de volta ao frontend em formato JSON.
-# Exibição:
+ Exibição:
  - O frontend recebe os dados e exibe os produtos em uma interface amigável, mostrando imagem, título, avaliações e reviews.
 
 ## Endpoints da API
