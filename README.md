@@ -25,21 +25,16 @@ Backend:
  - Axios
  - JSDOM
 
-/root
-├── index.html         # Página HTML que exibe o formulário de busca
-├── style.css          # Estilos para a interface
-├── searchProducts.js  # Lógica de busca e manipulação de resultados
-├── server.js          # Servidor backend em Node.js que realiza scraping da Amazon
-
 ## Como Usar
-1 - Clone o repositório:
-git clone https://github.com/seu-usuario/amazon-search.git
-cd amazon-search
-2 - npm install
-3 - npm start
-4 - Abra o arquivo index.html no navegador (# utilize o Live Server).
-5 - Digite uma palavra-chave (ex: "mouse") e clique em Buscar para obter os resultados da Amazon.
+1 - Clone o repositório: git clone https://github.com/seu-usuario/amazon-search.git abra usando visual studio code.
+2 - crie o arquivo ".env.development.local" e adicone(PORT=5000 - SERVER_URL=http://localhost:5000  - NODE_ENV=development)
+3 - npm install
+4 - npm start (se tudo der certo aparecerá no terminal a porta que esta rodando a api, ex: https://localhost:5000)
+5 - caso não abra tente, (node app.js) no seu terminal
+6 - Abra o arquivo index.html no navegador (# utilize o Live Server).
+7 - Digite uma palavra-chave (ex: "mouse") e clique em Buscar para obter os resultados da Amazon.
 
+obs: me avise se não conseguir, ficarei feliz em ajudar.
 
 ## Como Funciona
 # Frontend:
@@ -62,24 +57,6 @@ Resposta:
 
 # Exemplos de Requisição e Resposta
 Requisição: GET http://localhost:5000/api/scrape?keyword=mouse
-# Resposta (Exemplo):
-{
-  "keyword": "mouse",
-  "products": [
-    {
-      "title": "Mouse Logitech MX Master 3",
-      "rating": "4.8",
-      "reviews": "150",
-      "image": "https://example.com/image.jpg"
-    },
-    {
-      "title": "Mouse Gamer Razer DeathAdder",
-      "rating": "4.7",
-      "reviews": "200",
-      "image": "https://example.com/image2.jpg"
-    }
-  ]
-}
 
 # Possíveis Erros
 500 - Erro no Servidor: Pode ocorrer se houver um erro durante o scraping na Amazon.
